@@ -6,7 +6,7 @@ export class HelloWorldHandler {
   constructor(private readonly collaboration: GetHelloWorldCollaboration) {}
 
   @Get()
-  run(): string {
-    return this.collaboration.run();
+  async run(): Promise<string> {
+    return await this.collaboration.run();
   }
 }
