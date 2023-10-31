@@ -8,6 +8,7 @@ export class GetHelloWorldCollaboration {
 
   async run(): Promise<string> {
     const data = await firstValueFrom(this.httpBin.getUUID());
+    console.info('http response data:', data.data);
 
     return data.data.uuid;
   }
