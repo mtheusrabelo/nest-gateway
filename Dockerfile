@@ -8,6 +8,6 @@ RUN yarn
 
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
-CMD [ "node", "dist/main.js" ]
+CMD [ "node", "dist/src/main.js" ]
