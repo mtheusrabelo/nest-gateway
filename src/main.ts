@@ -8,7 +8,7 @@ async function bootstrap() {
     logger: console,
   });
 
-  const port = process.env.PORT || 80;
+  const port = process.env.PORT || 3000;
   await app.listen(port);
 }
 bootstrap();
