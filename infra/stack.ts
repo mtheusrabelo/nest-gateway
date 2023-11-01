@@ -1,4 +1,4 @@
-import { Service, StackContext } from 'sst/constructs';
+import { Config, Service, StackContext } from 'sst/constructs';
 
 export function Stack({ stack }: StackContext) {
   new Service(stack, 'NestGateway', {
@@ -16,4 +16,8 @@ export function Stack({ stack }: StackContext) {
     //   cloudfrontDistribution: false,
     // },
   });
+
+  // to set new secret, run:
+  // $ yarn sst secrets set MY_SECRET "value123"
+  new Config.Secret(stack, 'MY_SECRET');
 }
