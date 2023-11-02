@@ -1,8 +1,8 @@
-FROM node:18-bullseye-slim
+FROM node:20.9.0-bullseye-slim
 
 COPY . /app
 WORKDIR /app/
 
-RUN npm install
+RUN yarn
 
 ENTRYPOINT ["node", "app.mjs"]
