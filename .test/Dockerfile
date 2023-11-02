@@ -1,8 +1,13 @@
 FROM node:20.9.0-bullseye-slim
 
-COPY . /app
 WORKDIR /app/
 
-RUN npm install
+COPY package*.json ./
 
-ENTRYPOINT ["node", "app.mjs"]
+RUN yarn
+
+COPY . .
+
+RUN yarn build
+
+ENTRYPOINT ["yarn", "start"]
