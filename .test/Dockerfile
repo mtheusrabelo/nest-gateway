@@ -8,6 +8,4 @@ RUN yarn
 
 COPY . .
 
-RUN yarn build
-
 ENTRYPOINT ["yarn", "start"]
