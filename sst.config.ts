@@ -1,4 +1,4 @@
-import { Stack } from './infra/stack';
+import { Stack } from './.infra/stack';
 
 export default {
   // eslint-disable-next-line
