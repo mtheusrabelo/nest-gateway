@@ -10,6 +10,8 @@ jobs:
     name: Release tag
     runs-on: ubuntu-22.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
       - name: Install dependecies
         run: yarn
       - name: Deploy to production
