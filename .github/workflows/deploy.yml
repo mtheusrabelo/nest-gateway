@@ -9,7 +9,9 @@ jobs:
   deploy:
     name: Release tag
     runs-on: ubuntu-22.04
-    steps:         
+    steps:
+      - name: Install dependecies
+        run: yarn
       - name: Deploy to production
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
