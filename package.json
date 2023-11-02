@@ -12,7 +12,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node dist/src/main",
     "deploy:dev": "sst dev",
     "deploy:prod": "sst deploy --stage=production",
     "docker:build": "docker build -t nest-gateway --platform linux/amd64 -f Dockerfile .",
