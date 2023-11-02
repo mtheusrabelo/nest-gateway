@@ -17,7 +17,6 @@
     "deploy:prod": "sst deploy --stage=production",
     "docker:build": "docker build -t nest-gateway --platform linux/amd64 -f Dockerfile .",
     "docker:run": "docker run -p 3001:3000 nest-gateway",
-    "docker:build-test": "docker build -t nest-gateway-test --platform linux/amd64 -f .test/Dockerfile .test",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
