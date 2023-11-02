@@ -1,7 +1,14 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { check } from 'k6';
+const port = 3001;
+
+export const options = {
+  vus: 10,
+  duration: '5s',
+};
 
 export default function () {
-  http.get('http://localhost:3001/throttler');
-  sleep(1);
+  const res = http.get(`http://localhost:${port}/throttler`);
+  check(res, { 'status was 200': (r) => r.status == 200 });
+  // sleep(1);
 }

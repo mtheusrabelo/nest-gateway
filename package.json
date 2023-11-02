@@ -19,7 +19,7 @@
     "docker:run": "docker run -p 3001:3000 nest-gateway",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest --passWithNoTests",
-    "test:load": "k6 run --vus 10 --duration 10s test/loadTest.js",
+    "test:load": "k6 run test/loadTest.js",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
