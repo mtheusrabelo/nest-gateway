@@ -26,7 +26,7 @@ export function Stack({ stack }: StackContext) {
 
   new Service(stack, 'TestService', {
     path: "./.test",
-    architecture: 'arm64',
+    architecture: 'x86_64', // or arm64
     scaling: {
       minContainers: 1,
       maxContainers: 2,
