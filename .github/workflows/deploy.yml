@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    master
+
+jobs:
+  deploy:
+    name: Release tag
+    runs-on: ubuntu-22.04
+    steps:         
+      - name: Deploy to production
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          yarn sst deploy
