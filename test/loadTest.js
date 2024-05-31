@@ -1,5 +1,5 @@
-import http from 'k6/http';
 import { check } from 'k6';
+import http from 'k6/http';
 const port = 3001;
 
 export const options = {
