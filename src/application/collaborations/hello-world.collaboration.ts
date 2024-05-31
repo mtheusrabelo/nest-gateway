@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
+
 import { HttpBinGateway } from '../../infrastructure/gateways/http-bin.gateway';
 
 @Injectable()
